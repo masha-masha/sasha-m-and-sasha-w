@@ -1,0 +1,123 @@
+.home-page {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.home-content {
+    max-width: 600px;
+    padding: 30px 40px 60px 40px;
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    box-shadow: 0 20px 40px var(--shadow-color);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+.home-page__side-image {
+    max-width: 200px; 
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.home-page__side-image--left {
+    align-self: flex-start;
+}
+
+.home-page__side-image--right {
+    align-self: flex-end;
+    transform: rotate(5deg);
+}
+
+
+@media (max-width: 1024px) {
+    .home-page__side-image {
+        display: none;
+    }
+}
+
+
+.home__title {
+    font-size: 45px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.home__description {
+   padding: 15px 0 20px 0;
+   margin-bottom: 20px;
+}
+
+.home__description p {
+  font-size: 23px; 
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+  color: var(--text-primary); 
+}
+
+.home__description p:last-child {
+  margin-bottom: 0;
+}
+
+.home__description p span {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+
+
+.home__action {
+    padding: 15px 45px;
+    font-family: inherit;
+    font-size: 25px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.home__action:hover {
+    cursor: pointer;
+    color: white;
+    background-color: var(--btn-bg-hover);
+}
+
+@media (max-width: 768px) {
+    .home-page {
+        height: auto;
+        min-height: 100vh;
+        padding: 20px 20px; 
+    }
+
+    .home-content {
+        padding: 20px 20px 50px 20px;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .home__title {
+        font-size: 29px; 
+        line-height: 1.1;
+    }
+
+    .home__description {
+        font-size: 18px; 
+        line-height: 1.5;
+    }
+
+    .home__action {
+        display: block;
+        width: 100%; 
+        font-size: 20px;
+        padding: 15px;
+        text-align: center;
+    }
+}
