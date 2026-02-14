@@ -2,7 +2,7 @@ import { useTheme } from '../../contexts/ThemeContext';
 import "./ThemeToggle.css"
 
 const ThemeToggle = () => {
-  const { theme, toggleTheme } = useTheme(); // Используем хук
+  const { theme, toggleTheme } = useTheme(); 
   
   const linkToIcon = theme === "light" ? "/night.svg" : "/day.svg";
   return (
