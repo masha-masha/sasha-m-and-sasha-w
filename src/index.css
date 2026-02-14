@@ -103,6 +103,14 @@ img {
     text-transform: uppercase;
 }
 
+.home-footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
 .home-footer__link {
     text-decoration: none;
     color: inherit;
@@ -122,6 +130,12 @@ img {
         flex-direction: column;
         gap: 10px;
         
+    }
+
+    .home-footer__logo svg {
+        align-self: flex-start;
+        width: 24px;
+        height: 22px;
     }
 }
 
