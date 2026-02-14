@@ -109,6 +109,7 @@
 
     .reader__content {
         font-size: 18px;
+        text-align: left;
     }
 }
 
