@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import ContentsPage from "./components/ContentsPage/ContentsPage";
 import PlayPage from "./components/PlayPage/PlayPage";
 import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
 
       <Route path="/plays/:slug" element={<PlayPage />} />
 
-      <Route path="*" element={<div>Страница не найдена</div>} />
+      <Route path="*" element={<NotFoundPage/>} />
      </Routes>
      <footer className="home-footer">
       <div className="home-footer__content">

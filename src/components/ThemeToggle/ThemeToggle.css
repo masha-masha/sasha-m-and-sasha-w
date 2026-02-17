@@ -10,3 +10,7 @@
     font-family: 'Wremena', serif;
     border: none;
 }
+
+.theme-toggle img {
+    padding-bottom: 3px;
+}

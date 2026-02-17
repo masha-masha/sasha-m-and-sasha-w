@@ -7,9 +7,8 @@ import { useTheme } from "../../contexts/ThemeContext";
 
 const HomePage = () => {
 
- const { theme } = useTheme(); // Получаем текущую тему из контекста
+ const { theme } = useTheme(); 
 
-  // Выбираем правильный компонент SVG в зависимости от темы
   const WomanIcon = theme === 'dark' ? "/woman_dark-theme.svg": "/woman.svg";
   const ManIcon = theme === 'dark' ? "/man_dark_theme.svg": "/man.svg";
 
@@ -17,7 +16,7 @@ const HomePage = () => {
   <section className="home-page">
    <img
     src={WomanIcon}
-    alt=""
+    alt="Изображение женщины"
     className="home-page__side-image home-page__side-image--left"
     aria-hidden="true"
    />
@@ -38,7 +37,7 @@ const HomePage = () => {
 
     <img 
         src={ManIcon}
-        alt="" 
+        alt="Изображение мужчины" 
         className="home-page__side-image home-page__side-image--right"
         aria-hidden="true" 
       />
