@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
-import HomePage from "./components/HomePage/HomePage";
-import ContentsPage from "./components/ContentsPage/ContentsPage";
-import PlayPage from "./components/PlayPage/PlayPage";
-import ThemeToggle from "./components/ThemeToggle/ThemeToggle";
-import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
+import ScrollToTop from "./pages/ScrollToTop/ScrollToTop";
+import HomePage from "./pages/HomePage/HomePage";
+import ContentsPage from "./pages/ContentsPage/ContentsPage";
+import PlayPage from "./pages/PlayPage/PlayPage";
+import ThemeToggle from "./pages/ThemeToggle/ThemeToggle";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 function App() {
