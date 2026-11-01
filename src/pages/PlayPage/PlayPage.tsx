@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import plays from "../../data/plays.json";
+import { DialogueLine } from "./DialogueLine";
 import "./PlayPage.css";
 
 const PlayPage = () => {
@@ -8,12 +9,10 @@ const PlayPage = () => {
  const currentIndex = plays.findIndex((c) => c.slug === slug);
  const play = plays[currentIndex];
 
- if (!play) return <div>Глава не найдена</div>;
+ if (!play) return <div>Пьеса не найдена</div>;
 
  const hasPrev = currentIndex > 0;
  const hasNext = currentIndex < plays.length - 1;
-
- const isShouldBeBold = (s: string) => s === "remark" || s === "action";
 
  return (
   <main className="reader">
@@ -36,19 +35,9 @@ const PlayPage = () => {
      <div className="reader__scene">{play.scene}</div>
      {play.acts.map((act) => (
       <div key={act.actNumber}>
-       {act.dialogues.map((text, i) =>
-        isShouldBeBold(text.type || "") ? (
-         <p key={`line-${i}`} className="dialogue--main-remark">
-          {text.text}
-         </p>
-        ) : (
-         <p key={`line-${i}`} className="dialogue">
-          <span className="dialogue--name">{text.character}</span>
-          <span className="dialogue-remark">{text.remark || ""}</span>:{" "}
-          {text.text}
-         </p>
-        ),
-       )}
+       {act.dialogues.map((item, i) => (
+        <DialogueLine replica={item} index={i} />
+       ))}
       </div>
      ))}
     </div>
